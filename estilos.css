@@ -1,3 +1,22 @@
+:root {
+    --color-primario: #173b60;
+    --color-secundario: #183653;
+    --color-texto: #172f49;
+    --color-fondo: #f4f6f9;
+    --color-blanco: #ffffff;
+    --color-borde: #c5cfdb;
+    --color-borde-secundario: #d0d8e2;
+    --color-texto-ayuda: #718198;
+    --color-control: #aebbc9;
+    --color-foco: #8baed0;
+    --color-degradado: #1f5088;
+    --color-hover: #e3ebf5;
+    --color-hover-principal: #0b2340;
+
+    --sombra-bloques: rgba(18, 53, 91, 0.20);
+    --sombra-texto: rgba(0, 0, 0, 0.45);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,7 +32,8 @@ body {
 
 
 .cabecera {
-    background-color: #ffffff;
+    background-color: var(--color-primario);
+    background-image: linear-gradient(to right, var(--color-primario), var(--color-degradado));
     padding: 15px 30px;
     border-bottom: 1px solid #d0d8e2;
     display: flex;
@@ -26,6 +46,8 @@ body {
     font-weight: bold;
     margin: 0;
     color: #173b60;
+    text-shadow: 0 0.0625rem 0.125rem var(--sombra-texto);
+    color: var(--color-blanco);
 }
 
 .menu__lista {
@@ -39,6 +61,7 @@ body {
 .menu__enlace {
     text-decoration: none;
     color: #183653;
+    color: var(--color-blanco);
 }
 
 
@@ -91,6 +114,8 @@ body {
     padding: 12px;
     margin: 0;
     min-width: 0;
+    box-shadow: 0 0.125rem 0.5rem var(--sombra-bloques);
+
 }
 
 .grupo__titulo {
@@ -298,15 +323,13 @@ body {
     color: #173b60;
     font-size: 11px;
     cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .boton--principal {
     background-color: #173b60;
     color: #ffffff;
-}
-
-.boton:hover {
-    opacity: 0.85;
+    box-shadow: 0 0.125rem 0.25rem var(--sombra-bloques);
 }
 
 
@@ -315,6 +338,7 @@ body {
     border: 1px solid #c5cfdb;
     border-radius: 5px;
     padding: 12px;
+    box-shadow: 0 0.125rem 0.5rem var(--sombra-bloques);
 }
 
 .ayuda__titulo {
@@ -347,12 +371,17 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    transition: transform 0.2s;
+}
+.ayuda__paso:hover .ayuda__numero {
+    transform: scale(1.1);
 }
 
 .ayuda__texto {
     font-size: 10px;
     line-height: 1.5;
     margin: 0;
+    
 }
 
 
@@ -368,6 +397,7 @@ body {
 .pie__texto {
     font-size: 11px;
     color: #718198;
+    color: var(--color-blanco);
 }
 
 .pie__lista {
@@ -381,6 +411,7 @@ body {
     text-decoration: none;
     color: #183653;
     font-size: 11px;
+    color: var(--color-blanco);
 }
 
 
